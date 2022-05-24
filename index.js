@@ -36,7 +36,7 @@ client.on("messageCreate", async (message) => {
 
         if (message.author.id !== "978703218764816404") {
           message.channel.send(`Sayın <@${message.author.id}> Mesaj Formatınız Mail İçin Uygun Değil ! Bu Mesaj 1 dk Sonra Silinecektir.`)
-          message.channel.send(`Bu Mesajınızın Kalıcı Olması İçin Bu Mesaj Formatına Uymak Zorundasınız. => Mesaj Başlığı<>mail1,mail2,mail3<>mesajiçeriği`)
+          message.channel.send(`Bu Mesajınızın Kalıcı Olması İçin Bu Mesaj Formatına Uymak Zorundasınız. Ayraç Olarak <> Kullanınız. => Mesaj Başlığı<>mail1,mail2,mail3<>mesajiçeriği`)
         }
 
         setTimeout(() => {
