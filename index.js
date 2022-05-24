@@ -1,7 +1,6 @@
-import dotenv from "dotenv"
-dotenv.config()
-import Discord from "discord.js"
-import { sendMail } from "./services/Mailer"
+require("dotenv").config()
+const Discord = require("discord.js")
+const { sendMail } = require("./services/Mailer")
 
 
 const client = new Discord.Client({
@@ -23,7 +22,7 @@ client.on("messageCreate", async (message) => {
         const title = lines[0]
         const mails = lines[1].split(",")
 
-        let image_data: string = ""
+        let image_data = ""
         const image_urls = message.attachments.map(item => item.attachment)
 
         if (image_urls.length) {

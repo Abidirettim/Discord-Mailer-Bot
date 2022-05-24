@@ -4,7 +4,7 @@
   "description": "UnTelCloud Discord Bot",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon --watch \"./**\"  --ext \"ts,json\" --exec \"ts-node index.ts\"",
+    "start": "nodemon index.js",
     "build": "tsc"
   },
   "author": "Abidirettim, SefaTr, Pclokcer",

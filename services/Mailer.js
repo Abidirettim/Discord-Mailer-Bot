@@ -1,7 +1,7 @@
-import nodemailer from 'nodemailer'
+const nodemailer = require("nodemailer")
 
 
-export const getMailConfigurate = () => {
+const getMailConfigurate = () => {
   return nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -13,7 +13,7 @@ export const getMailConfigurate = () => {
   })
 }
 
-export const sendMail = async (receivedMail: string, issue: string, text: string) => {
+exports.sendMail = async (receivedMail, issue, text) => {
   let transporter = getMailConfigurate()
 
   return transporter.sendMail({
